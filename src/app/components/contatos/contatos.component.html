@@ -1,0 +1,14 @@
+<div class="container">
+    <h1 class="title">Lista de Dados</h1>
+    <ul class="list">
+      <li class="list-item" *ngFor="let item of dataList">
+        <div class="item-content">
+            <div class="property">{{ item.nome }}</div>
+          <div class="property">{{ item.cpf }}</div>
+          <div class="property">{{ item.telefone }}</div>
+          <div class="property">{{ item.logradouro }}</div>
+          <div class="property">{{ item.CEP }}</div>
+        </div>
+      </li>
+    </ul>
+  </div>

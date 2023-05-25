@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -9,21 +11,20 @@ export class LoginComponent implements OnInit{
 
   username:string = '';
   password:string = '';
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(){
 
   }
-
+  //Funcão que valida se o usuario é permitido ou não
   validateLogin(){
-    // console.log((this.username))
-    // console.log((this.password))
     if (!this.username || !this.password) {
       alert('Por favor, preencha todos os campos de login.');
-      
+ 
     }else if (this.username == "adm" && this.password == "123") {
       alert('Login bem-sucedido!');
-      // Redirecionar
+      this.router.navigate(['/contatos']);
+
     } else {
       alert('Usuário ou senha inválidos. Tente novamente.');
     }
