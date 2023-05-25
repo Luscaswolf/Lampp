@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit{
       alert('Por favor, preencha todos os campos de login.');
  
     }else if (this.username == "adm" && this.password == "123") {
-      alert('Login bem-sucedido!');
       this.router.navigate(['/contatos']);
 
     } else {
